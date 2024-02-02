@@ -1,0 +1,361 @@
+---
+title: "FutStat - Final Analysis"
+subtitle: "The Soccer Training App"
+author: Ayush Kala, Oscar Southwell, Mansoor Ali, Sumedh Joshi
+date: December 10, 2023
+format:
+  html:
+    theme: cerulean
+    toc: true
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+knitr::opts_chunk$set(
+    warning = FALSE,
+    message = FALSE,
+    fig.path = "figs/",
+    fig.width = 7.252,
+    fig.height = 4,
+    comment = "#>",
+    fig.retina = 3
+)
+
+# Load libraries here
+library(tidyverse)
+library(here)
+spelling::spell_check_files("report.qmd")
+```
+
+
+
+# Abstract
+Our team is studying a mobile application in development that aims to provide value to soccer players in the U.S. belonging to the 14-29 age demographic. The objective of our study was to understand the combination of application features and price most desirable to users within this demographic. From our final survey analysis, we determined that inclusion of the training program feature was most critical to optimize market share over competitor applications.  
+
+
+
+# Introduction
+FutStat is a new mobile application designed to help soccer players across the United States improve their game through a variety of training features. Our team saw that there was a pressing lack of options for high school, university, and post-university soccer players looking for programs to enhance their skill set and decided to act. Our app gives players access to personalized training and workout routines, individualized meal plans, gamification features & leaderboards, In-App Counseling, and Combined Training Sessions. In order to gain better insight into our target customer group and their views on these features, we set out to design a comprehensive survey on FutStat: The Soccer Training App.
+
+
+
+# Survey Design
+
+### Eligibility Requirements
+In designing our survey, we carefully designed the eligibility criteria to ensure relevance and meaningful insights. First, respondents should fall within the 14 to 29 age range, as younger individuals may face challenges affording our app, while those over 30 might exhibit lower interest levels. Secondly, active participation in soccer is a prerequisite, reflecting our focus on engaged players. Lastly, a genuine interest in game improvement is key, filtering out those with purely recreational motivations.
+
+### Respondent Information
+- We started our final survey with a common knowledge test question to see if our survey participants really had any interest in soccer. 
+- In our next section, we started by gathering information on our respondents age group. This question was implemented to give us critical data in our final survey on which sub-demographic within our target audience is most critical to our products success. 
+- We also collected data on our respondent’s gender. 
+- Further, to get an idea of user’s soccer background, we asked respondents on how they’d describe their soccer level, how often they played soccer, and the positions they either played, or were interested in getting better at.  
+- We then asked respondents if they currently used any existing soccer-training related apps. Near the end of our survey, we also asked respondents on their monthly expenditure on mobile apps, the average time they spend per day on mobile learning apps, and the type of device they use.
+- Finally, we also surveyed users on their annual household income to get a better understanding of the financial demographic our users were in. 
+
+
+### Educational Material
+Firstly, we provided our respondents with a short, generalized description of our application on our survey welcome page. In our Educational Information section, we provided users with a description of each feature provided within our application. These were shortened from our pilot server for the sake of clarity. 
+
+In addition, for each feature, we provided a detailed graphic design showcasing a mock-up of what our app screen might look like for a typical user experience of that feature which made our features far easier to visualize from an outside perspective. For example, we included the graphic below for the personalized training feature:
+
+<center>
+<img style = "border: 1px solid black;" x
+src = "https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/Group%20Training%20Page%20FutStat.png?raw=true" width=600 length = 600>
+</center>
+
+
+### Conjoint Questions & Selected Attributes
+
+
+For our conjoint analysis, we strategically selected five key features with binary levels (Yes/No) to ascertain their presence or absence in user preferences. Additionally, we incorporated a Price attribute with three tiers ($10, $20, $30) to explore a realistic range of consumer price sensitivity. Each respondent encountered eight choice questions, each offering three distinct alternative: 
+
+
+1. __"Price"__ is an absolute necessity for our model design; it’s the baseline against which all our other attributes our measured. Once we’d decided upon a basic pricing model, we came to the conclusion on these three pricing options based on existing market competition. It should be noted that our decision not to include a $0 pricing option was purposeful; we realized that this option would be selected nearly every time if provided as an option with our conjoint questions and so it was not included.
+ 
+2. Our second attribute, __“Personalized Training”__, encompasses insightful data analytics and targeted drills to enhance user performance, with a structured training roadmap for players to view. As the core feature of our application, we knew we had to include this as one of our attributes we’d survey in the conjoint questions.  
+
+3. Our third attribute was __“Meal Plan”__, another feature that was fundamental to our apps identity and therefore required conjoint question data. This feature gives users access to a curated selection of gourmet recipes, tailored to align with their unique dietary preferences and nutritional requirements so that they can optimize performance.  
+
+4. Our fourth attribute, __“Gamification”__, allows users to participate in gamified challenges by completing specific training tasks and improving their performance. This feature includes the ability to compare user achievements on leaderboards, showcasing their progress and skills with friends and peers. 
+
+5. Our fifth attribute, __“In-App Counseling”__, encompasses the option for players to receive access to dedicated in-app counseling from soccer performance coaches. This includes tactical & mental soccer coaching videos, the ability to book sessions with sports psychologists, and hear advice from other players in similar situations. 
+
+6. Finally, we included __“Combined Training Sessions”__ as our sixth attribute, encompassing the option for users to engage in group training sessions with other players on the app. This feature includes access to personalized drills for the combination of player profiles involved in the session. 
+
+__Attribute Table:
+The below table consists of the various attributes and their descriptions.__
+
+<center>
+<img src = "https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/Attribute%20Description%20Table.png?raw=true" width = 600 length = 600>
+</center>
+
+
+### Major Changes to our Survey
+
+In our pilot survey, we had provided two unique attribute levels for each feature of our applications (example: “Generic” and “AI” for our training attribute, “Generic” and “Personalized” for our meal plan, etc.). For our final survey, we reduced these attribute levels to “Yes” and “No” for each of the five application features included in our attributes. This was done for several critical reasons. First, it was extremely difficult to fully define these attribute levels within our pilot survey, and we got a fair amount of feedback that they weren’t particularly clear. 
+
+We explored creating graphics for each attribute level, similar to those in our educational section. However, this would have been a time-consuming process, and there was no feasible technical solution for displaying 10 graphics of this size on the conjoint questions page. This would have required placing them on the educational page, leading to potential confusion for respondents. Moreover, collecting feedback on binary attribute levels ("yes" and "no") proved statistically easier, compelling respondents to prioritize attributes and providing clearer insights into feature utility. 
+
+### Conjoint Example Question
+
+__Each respondent was faced with 8 conjoint questions. Here’s an example of one of them:__
+
+<center>
+<img style = "border: 1px solid black;" 
+src = "https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/ConjointQuestEx1New.jpg?raw=true" width = 600 length = 600>
+</center>
+
+
+# Data Analysis
+## Sample Description
+
+Our target population were people between the ages 14-29 who are not only interested  in soccer but also want to develop their skills professionally. In addition, the target population are those adults who are located in the US. Now coming to the sample size of our responses  the total number of respondents in our data set was 365, 203 and 180 for p1, p2 and p3 respectively.
+
+| Demographic Variable                  | Response Options                                                                      |
+|---------------------------------------|---------------------------------------------------------------------------------------|
+| Gender                                | Male, Female, Prefer not to say                                                       |
+| Monthly Expenditure                   | \$0, \$1-\$10, \$11-\$20, More than \$20                                              |
+| Per day usage                         | 0 hours, 1 hour, 2 hours, More than 2 hours                                           |
+| Device type                           | Apple, Android, Other                                                                 |
+| Annual Income                         | Less than \$10,000, \$10,000-\$39,000, \$40,00-\$89,000, \$90,000 or more             |
+
+
+## Data Cleaning
+
+The total number of  respondents in the initial dataset was 365, 203, and 180 for p1, p2, and p3 respectively. After merging these datasets and performing various cleaning steps, the final sample size was reduced to 160 respondents.
+
+
+First, we filtered out the bad responses (37 respondents). The second step involved excluding incomplete responses by removing respondents who did not answer all choice questions (from cbc1 to cbc8), this ensured that the dataset consisted of fully answered surveys, enhancing the reliability of the subsequent analysis. Anyone who didn’t complete all cbc questions (13 respondents) were filtered out.
+Furthermore, the next step involved filtering the responses based on completion time, where respondents finishing in the lower 10th percentile (11 respondents) were excluded. Finally, in the last step, a filter was applied to remove participants who failed the attention check question (cbcPractice12 == 2), enhancing the data's quality by excluding respondents who did not adequately pay attention (11 respondents). The combination of these filtering processes resulted in a clean dataset.
+
+
+__The accompanying bar chart provides empirical support for the attributes and levels chosen for the conjoint analysis by the 160 respondents that remained after cleaning our data:__
+
+<center>
+<img style = "border: 1px solid black;" 
+src = "
+https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/number%20of%20yesno%20for%20each%20attribute.png?raw=true
+" width = 600 length = 600>
+</center>
+
+
+## Modeling
+
+$$
+\tilde{u}_j = \beta_1 x_j^{\mathrm{price}} + \beta_2 x_j^{\mathrm{train}} + \beta_3 x_j^{\mathrm{meal}} + \beta_4 x_j^{\mathrm{game}} + \beta_5 x_j^{\mathrm{counsel}} + \beta_6 x_j^{\mathrm{group}} + \varepsilon_j
+$$
+
+
+### Simple Logit Model
+<br>
+
+<center>
+<img style = "border: 1px solid black;" 
+src = "https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/linear%20model%20coefficients.png?raw=true" width = 600 length = 600>
+</center>
+<br>
+
+
+For the simple logit model, the positive coefficients for all the attributes associated with app features imply that these features substantially increase the utility for consumers, with the training program being the most influential and gamification being the least influential. The negative coefficient for price is expected and indicates a typical inverse relationship between price and utility, emphasizing the importance of competitive pricing to maintain consumer interest and satisfaction.
+
+
+
+### Mixed Logit Model
+<br>
+<center>
+<img style = "border: 1px solid black;" 
+src = "https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/mixed%20logit%20coefs.png?raw=true" width = 600 length = 600>
+</center>
+<br>
+
+
+The mixed logit model, introducing variability in consumer preferences, shows that while the training program remains the predominant driver of utility, there's significant individual variation in its valuation, as indicated by the negative standard deviation. This suggests that a one-size-fits-all approach may not be optimal, and a differentiated strategy could be more effective. The positive standard deviations for meal plan and gamification attributes imply diverse consumer preferences, providing an opportunity for market segmentation and personalized marketing initiatives.
+
+
+### Heterogeneous Model
+<br>
+<center>
+<img style = "border: 1px solid black;" 
+src = "https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/coef%20comparison%20between%20groups.png?raw=true" width = 450 length = 450>
+</center>
+<br>
+
+In analyzing consumer heterogeneity, we segmented our respondents into two groups, revealing distinct preferences. Group A exhibits a higher valuation for all attributes, especially the training program, and appears less sensitive to price compared to Group B. These insights, derived from the random utility theory, indicate that Group A might prioritize a comprehensive feature set and could be targeted with a premium pricing strategy. In contrast, Group B's slightly lower valuations across the board suggest a need for a more cost-sensitive approach. The WTP analysis for each group in the next section will further refine our understanding of these segments, informing strategies that cater to their unique preferences.
+
+
+
+# Results
+
+### WTP for Product Attributes
+<br>
+<center>
+<img style = "border: 1px solid black;" 
+src = "https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/WTP%20for%20product%20attributes.png?raw=true" width = 600 length = 600>
+</center>
+<br>
+
+The WTP estimates, derived using a Willingness-to-Pay (WTP) space model, provide an insightful quantification of consumer preferences. By directly estimating WTP with a multivariate normal distribution based on the model's coefficients and their covariance matrix, we can interpret the model's output with a high degree of statistical confidence. Using 10,000 draws of the coefficients to generate the WTP draws ensures that the confidence intervals are robust, capturing the inherent variability and uncertainty in the estimates.
+
+The results indicate that 'Training_Program_Yes' has the highest mean WTP, which statistically confirms it as the most valued attribute among consumers. This aligns with the expectation that consumers are willing to invest more in services that promise to improve their skills directly. The 'Meal_Plan_Yes' attribute, while also important, has a more concentrated range of WTP, suggesting that consumers have a more consistent valuation for this aspect of the service.
+
+Attributes such as 'Counseling_Yes' and 'Combined_Training_Session_yes', despite having positive mean WTP values, present lower consumer valuation. This could point to these features being perceived as nice-to-have rather than essential. The lowest WTP for 'Gamification_Yes' suggests a more limited appeal or a preference for more specialized services.
+
+The technical analysis of WTP space model outputs demonstrates that training and meal planning are pivotal in driving consumer choices, while other features play supportive, yet less critical, roles. This nuanced understanding of consumer valuation can guide strategic decisions in development and marketing of the FutStat app.
+
+
+### WTP Comparison between Group A and B
+<br>
+<center>
+<img style = "border: 1px solid black;" 
+src = "https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/WTP%20and%20ci%20comparison%20between%20group%20A%20and%20B.png?raw=true" width = 600 length = 600>
+</center>
+<br>
+
+The WTP analysis distinguishes the preferences between two subgroups: Group A places a higher value on training programs, suggesting a focus on skill enhancement, while Group B's lower WTP across all features indicates a more price-sensitive or casual approach to soccer training. The consistent value placed on meal plans by both groups signifies a general interest in nutrition, albeit to varying degrees. Lesser emphasis on gamification, counseling, and combined sessions, especially within Group B, suggests these features are supplementary rather than primary drivers of choice. This variation underscores the need for market segmentation and personalized product features to cater to the distinct priorities of each subgroup within the soccer community.
+
+### Market Simulation
+
+<br>
+<center>
+<img style = "border: 1px solid black;" 
+src = "https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/Market%20simulation.png?raw=true" width = 600 length = 600>
+</center>
+<br>
+
+The market simulation results indicate a clear preference among consumers for certain product attributes and their associated values. The most notable insight is the high market share (approximately 57%) for the alternative priced at $20, which includes a training program but excludes meal plans and counseling. This significant preference suggests that while users value the training component of the product, they may be more price-sensitive or less interested in additional features such as meal plans and counseling. This preference for the training program is consistent with the model coefficients, where the training program possesses a high positive coefficient of approximately 2.59, indicating a strong influence on consumer choice.
+
+The alternative priced at $15, despite being the least expensive, only garnered about 31% of the market share. This could indicate that while the option is economically appealing, the inclusion of both meal plans and counseling without the training program does not align with the primary motivations of the target audience.
+
+Interestingly, the most expensive alternative at $25, which combines meal plans and gamification with the combined training program, has the lowest market share at around 12%. This outcome suggests that the higher price point is a significant barrier to adoption, despite the inclusion of multiple desirable features.
+
+To increase demand, a focus on the training aspect, combined with a moderate price point, seems most effective. Attributes like meal plans and counseling could be offered as optional add-ons rather than standard features to maintain a competitive edge. Gamification, paired with training, might also be explored further, as it is included in both higher market share alternatives, indicating some level of consumer interest. It is crucial to strike a balance between enriching the product offering and maintaining an accessible price to optimize market adoption.
+
+### Price Sensitivity
+<br>
+<center>
+<img style = "border: 1px solid black;" 
+src = "https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/Price%20sensitivity.png?raw=true" width = 600 length = 600>
+</center>
+<br>
+
+The price sensitivity analysis depicted in the graph demonstrates a clear negative correlation between price and market share, a common economic principle. As price increases from $10 to $30, the predicted probability of a product being chosen consistently decreases. This trend is highlighted by the shaded confidence interval, which broadens as the price increases, indicating growing uncertainty about the market share estimate at higher prices.
+
+Based on the solid line, which represents the surveyed price range of $15 to $25, the highest market share is associated with the lower end of this spectrum. Therefore, the optimal price point for maximizing market share seems to be closer to $15, which aligns with the highest point of the solid line before it starts to decline.
+
+The uncertainty in these estimates is visually represented by the width of the confidence interval band. At lower prices, the band is narrower, suggesting a higher confidence level in the market share estimate. As the price rises, the band widens, indicating less certainty about the market share outcome. This uncertainty must be factored into any revenue maximization strategy, balancing the potential gain from increased prices against the risk of reducing market share.
+
+### Revenue Sensitivity
+<br>
+<center>
+<img style = "border: 1px solid black;" 
+src = "https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/Revenue%20sensitivity.png?raw=true" width = 600 length = 600>
+</center>
+<br>
+
+The revenue sensitivity graph complements the price sensitivity analysis by showing the projected revenue across different price points. The parabolic shape of the solid line in the graph indicates that there is an optimal price point at which revenue is maximized. This point appears to be just over $20, after which the revenue starts to decline, suggesting a decrease in consumer demand outweighs the benefit of a higher price.
+
+Integrating this with the price sensitivity analysis, we see that while a lower price point around $15 may yield a higher market share, it does not necessarily result in the highest revenue. The shaded area, representing the confidence interval, indicates that there is greater certainty in revenue projections at lower price points, with the uncertainty increasing as the price moves away from the revenue-maximizing point.
+
+Together, these analyses suggest that while market share is maximized at the lower end of the price spectrum, the revenue-maximizing strategy involves setting the price slightly higher, despite a reduction in market share. However, the increasing width of the confidence interval at higher price points signals that the estimated revenue becomes less reliable, emphasizing the need for cautious interpretation and the potential value of further market testing to refine pricing strategy.
+
+
+# Final Recommendations and Conclusions
+
+
+In light of our analysis, FutStat should focus on enhancing its training program, meal plan, and combined training sessions. These features are key to attracting users, as shown by their strong influence in our models. We suggest a pricing approach that allows users to choose from a basic package with optional enhancements. This way, FutStat can cater to different preferences and budgets, as indicated by our varied findings on what consumers value. Emphasizing the training program in marketing efforts is crucial, as it's a major factor in why people would choose FutStat. Our market simulations show that this feature, in particular, can give FutStat an edge over competitors. By aligning the app's offerings with what users are willing to pay for, FutStat can maximize both customer satisfaction and its market position.
+
+Based on our WTP analysis and price sensitivity evaluations, a strategic pricing model centered around the $20 mark is advisable. This price point aligns with our findings of high consumer utility derived from key features, particularly the training program, which consistently ranks high in consumer preference. At $20, FutStat capitalizes on the balance between consumer willingness to pay for premium features and the market share potential, as evidenced in the market simulation outcomes.
+
+Incorporating Random Utility Theory, this pricing strategy acknowledges the inherent trade-off between price and perceived utility among different consumer segments. While a lower introductory price of $15 might initially attract a broader user base, leveraging consumer willingness to pay for high-value features, such as meal plans and combined training, suggests a gradual shift towards a slightly higher price point for long-term revenue optimization.
+
+The profitability of FutStat hinges critically on the evolving preferences of soccer enthusiasts, the competitive dynamics in the sports app market, and economic trends that could affect spending habits. Given soccer's burgeoning popularity in the United States, especially with high-profile players like Lionel Messi joining MLS, the sport's growth trajectory offers potential yet remains unpredictable. The objective in the face of this uncertainty is to maintain a price that reflects the high utility consumers derive from the app's key features, while also ensuring sustainable revenue growth. The implementation of a tiered pricing model, with a basic package emphasizing the training program and additional features as premium options, would cater to the diverse utility perceptions revealed in our analysis, meeting various consumer needs and maximizing overall market success.
+
+
+# Limitations
+
+1. Rationality is a core assumption of Random Utility Theory, but real-life decisions are often influenced by biases, emotions, and imperfect information, challenging the assumption of consistent utility maximization. To tackle this, we can try to incorporate behavioral insights into the model. This can be achieved by integrating elements of behavioral economics, such as framing effects or default options, to better capture the non-rational aspects of consumer behavior. Additionally, conducting qualitative research like focus groups or in-depth interviews can provide a more nuanced understanding of the factors influencing consumer choices, which can then be used to refine the utility model. This approach will help in creating a more realistic model that aligns closer with actual consumer behavior.
+
+2. Paying respondents to take the survey may have incentivized them to prioritize completion speed over thoughtful engagement, potentially skewing the results. Additionally, a significant portion of respondents did not fall within the target age range (close to 33% respondents were over the age of 30), potentially diluting the relevance of the findings. To enhance survey accuracy, it would be beneficial to carefully offer the survey to soccer academies and clubs, coupled with an incentive structure rewarding detailed, relevant responses rather than speed, thereby ensuring participants align with the target demographic and are motivated to provide thoughtful, comprehensive answers.
+
+3. Our analysis focused solely on identifying which features respondents desired, without delving into the specific aspects of each feature that were most valued. This approach limits our understanding of the finer details and nuances that make each feature appealing to different segments of our target audience. To address this limitation, it would be beneficial to conduct a follow-up analysis focused specifically on the sub-features. This would enable us to gain deeper insights into what specific elements of the features are most appealing and valuable to users, thereby facilitating more targeted and effective feature enhancements.
+
+4. The chosen price points for the assessment were not derived from prior analysis, which could lead to a misrepresentation of consumer utility across realistic price ranges, affecting the validity of the price sensitivity conclusions. To address this limitation, it's recommended to conduct a thorough market analysis to identify realistic price ranges, which can then be used to reassess consumer utility and refine the price sensitivity conclusions for more accurate and viable pricing strategies.
+
+5. To ensure more reliable analysis and achieve a standard error of 0.05, as indicated by our power analysis, our survey should have included a larger sample size. Despite aiming for 300 respondents, the final count post-data cleaning was only 160, which increased the standard error to approximately 0.06. This highlights the need for a more extensive respondent base in future studies to enhance the accuracy of our findings.
+
+6. Our generalized approach to utility assessment overlooked the unique preferences across various demographic segments like age, gender, and income. To refine this, future models should integrate interaction terms to capture these demographic differences. Such enriched models will provide deeper insights, allowing for segmented marketing strategies tailored to specific consumer needs. At minimum, a dual-strategy approach should be considered, targeting Group A with a premium version of the app encompassing full features, while offering a basic or discounted version to the more price-sensitive Group B.
+
+
+# Appendix
+
+<br>
+<center>
+<img style = "border: 1px solid black;" 
+src = "https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/Survey_1.JPG?raw=true" width = 600 length = 600>
+</center>
+<br>
+<center>
+<img style = "border: 1px solid black;" 
+src = "https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/Survey_2.JPG?raw=true" width = 600 length = 600>
+</center>
+<br>
+<center>
+<img style = "border: 1px solid black;" 
+src = "https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/Survey_2.1.JPG?raw=true" width = 600 length = 600>
+</center>
+<br>
+<center>
+<img style = "border: 1px solid black;" 
+src = "https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/Survey_3.png?raw=true" width = 600 length = 600>
+</center>
+<br>
+<center>
+<img style = "border: 1px solid black;" 
+src = "https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/Survey_4.png?raw=true" width = 600 length = 600>
+</center>
+<br>
+<center>
+<img style = "border: 1px solid black;" 
+src = "https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/Survey_5.png?raw=true" width = 600 length = 600>
+</center>
+<br>
+<center>
+<img style = "border: 1px solid black;" 
+src = "https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/Survey_6.png?raw=true" width = 600 length = 600>
+</center>
+<br>
+<center>
+<img style = "border: 1px solid black;" 
+src = "https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/Survey_7.png?raw=true" width = 600 length = 600>
+</center>
+<br>
+<center>
+<img style = "border: 1px solid black;" 
+src = "https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/Survey_8.png?raw=true" width = 600 length = 600>
+</center>
+<br>
+<center>
+<img style = "border: 1px solid black;" 
+src = "https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/Survey_9.png?raw=true" width = 600 length = 600>
+</center>
+<br>
+<center>
+<img style = "border: 1px solid black;" 
+src = "https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/Survey_10.JPG?raw=true" width = 600 length = 600>
+</center>
+<br>
+<center>
+<img style = "border: 1px solid black;" 
+src = "https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/Survey_11.JPG?raw=true" width = 600 length = 600>
+</center>
+<br>
+<center>
+<img style = "border: 1px solid black;" 
+src = "https://github.com/sumedhjoshi01/MarketingAnalytics/blob/main/Thank1.png?raw=true" width = 600 length = 600>
+</center>
+
+
+
+
